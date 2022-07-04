@@ -25,7 +25,7 @@ class MyApp extends ConsumerWidget {
           colorScheme:
               ColorScheme.fromSeed(seedColor: Colors.red, primary: Colors.red)),
       home: AuthWidget(adminSignedInBuilder: (context) {
-        return AdminHome();
+        return const AdminHome();
       }, nonSignInBuilder: (context) {
         return const SignInPage();
       }, signInBuilder: (context) {
