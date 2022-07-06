@@ -95,6 +95,7 @@ class _AdminAddProductPageState extends ConsumerState<AdminAddProductPage> {
     openIconSnackBar(context, "Product added successfully",
         const Icon(Icons.check, color: Colors.white));
     Navigator.pop(context);
+    ref.watch(addImageProvider.state).state = null;
   }
 }
 
