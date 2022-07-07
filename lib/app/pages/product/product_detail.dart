@@ -1,4 +1,6 @@
+import 'package:ecommerce/app/providers.dart';
 import 'package:ecommerce/models/product_model.dart';
+import 'package:ecommerce/utils/snackbar.dart';
 import 'package:ecommerce/widgets/user_top_bar.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import "package:flutter/material.dart";
@@ -83,7 +85,7 @@ class ProductDetail extends ConsumerWidget {
                             fontSize: 18),
                       ),
                       Text(
-                        "\$" + product.price.toString(),
+                        "\$${product.price}",
                         style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,
@@ -95,7 +97,11 @@ class ProductDetail extends ConsumerWidget {
                     height: 25,
                   ),
                   GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        ref.read(bagProvider).addProduct(product);
+                        openIconSnackBar(context, "Product added successfully",
+                            const Icon(Icons.check, color: Colors.white));
+                      },
                       child: Container(
                         width: double.infinity,
                         height: 50,
