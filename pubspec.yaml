@@ -37,6 +37,10 @@ dependencies:
   firebase_storage: ^10.2.10 #for storage
   flutterfire_ui: ^0.4.0 # for pre-built uis
   flutter_riverpod: ^1.0.3
+  flutter_stripe: ^2.4.0
+  flutter_dotenv: ^5.0.0
+  http: ^0.13.4
+
   flutter:
     sdk: flutter
 
@@ -67,6 +71,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - .env
     - assets/anim/
 
   # To add assets to your application, add an assets section, like this:

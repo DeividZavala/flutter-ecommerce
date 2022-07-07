@@ -40,7 +40,6 @@ class ProductsDisplay extends ConsumerWidget {
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(10)),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Expanded(
                           child: Hero(
@@ -53,19 +52,26 @@ class ProductsDisplay extends ConsumerWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        Text(
-                          product.name.capitalize(),
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            product.name.capitalize(),
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        Text("\$${product.price.toString()}",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).colorScheme.primary)),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text("\$${product.price.toString()}",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color:
+                                      Theme.of(context).colorScheme.primary)),
+                        ),
                       ],
                     ),
                   ),
