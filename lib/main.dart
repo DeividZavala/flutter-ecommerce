@@ -30,7 +30,7 @@ class MyApp extends ConsumerWidget {
       }, nonSignInBuilder: (context) {
         return const SignInPage();
       }, signInBuilder: (context) {
-        return UserHome();
+        return const UserHome();
       }),
     );
   }
