@@ -69,6 +69,7 @@ class ProductListTile extends StatelessWidget {
                     children: [
                       Text(product.name,
                           style: const TextStyle(
+                              overflow: TextOverflow.ellipsis,
                               color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.bold)),
