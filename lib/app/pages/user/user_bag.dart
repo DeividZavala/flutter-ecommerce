@@ -1,5 +1,5 @@
 import 'package:ecommerce/app/providers.dart';
-import 'package:ecommerce/widgets/empty_widge.dart';
+import 'package:ecommerce/widgets/empty_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
