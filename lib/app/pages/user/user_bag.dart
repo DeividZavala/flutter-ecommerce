@@ -73,6 +73,8 @@ class UserBag extends ConsumerWidget {
                               const SnackBar(
                                   content: Text('Payment completed!')),
                             );
+                            ref.watch(databaseProvider)!.saveOrder(
+                                result.payIntentId!, userBag.productsBag);
                             userBag.clearBag();
                             Navigator.pop(context);
                           } else {

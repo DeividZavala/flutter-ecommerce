@@ -5,7 +5,7 @@ class Product {
   final String imageUrl;
   final double price;
 
-  Map<String, dynamic> toMap(String docId) {
+  Map<String, dynamic> toMap([String? docId]) {
     return {
       "id": docId,
       "name": name,
