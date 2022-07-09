@@ -37,13 +37,20 @@ class PaymentService {
 //2. initialize the payment sheet
       await Stripe.instance.initPaymentSheet(
         paymentSheetParameters: SetupPaymentSheetParameters(
-          paymentIntentClientSecret: jsonResponse['paymentIntent'],
+          // Enable custom flow
+          customFlow: true,
+          // Main params
           merchantDisplayName: 'Flutter Stripe Store Demo',
-          customerId: jsonResponse['customer'],
+          paymentIntentClientSecret: jsonResponse['paymentIntent'],
+          // Customer keys
           customerEphemeralKeySecret: jsonResponse['ephemeralKey'],
-          style: ThemeMode.light,
+          customerId: jsonResponse['customer'],
+          // Extra options
           testEnv: true,
-          merchantCountryCode: 'US',
+          applePay: true,
+          googlePay: true,
+          style: ThemeMode.dark,
+          merchantCountryCode: 'DE',
         ),
       );
 
