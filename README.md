@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/13972980/179445128-2c38ceae-3583-4fa4-9124-63d4bba5b393.jpeg" width="300" alt="ecommerce-app-preview"/>
+
 # ecommerce
 
 A new Flutter project.
